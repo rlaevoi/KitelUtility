@@ -1,6 +1,7 @@
 #include "general.h"
 #include "select.h"
 #include "general_one.h"
+#include "general_two.h"
 void general_run();
 
 void generalCal() {
@@ -65,6 +66,24 @@ void generalTwo() {
 	scanf_s("%d", &cal);
 	printf("두번째 숫자를 입력하세요.\n");
 	scanf_s("%lf", &second);
+
+	switch (cal) {
+	case 1:
+		sub(first, second);
+		break;
+	case 2:
+		add(first, second);
+		break;
+	case 3:
+		div(first, second);
+		break;
+	case 4:
+		mul(first, second);
+		break;
+	case 5:
+		per(first, second);
+		break;
+	}
 }
 void generalString() {
 	printf("[일반용] 문자열 계산기를 선택하셨습니다.\n");
